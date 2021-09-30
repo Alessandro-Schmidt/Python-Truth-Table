@@ -53,16 +53,16 @@ def main():
     print('-'*len('1 - Implicação (P -> Q) ---- 2 - Conjunção (P ^ Q)\n3 - Disjunção (P v Q) ---- 4 - Bicondicional (P<=>Q)'))
     while True:
         escolha = str(input('Digite a expressão ou o número da operação: '))
-        if escolha in 'P -> Q' or escolha == '1': 
+        if escolha[2] == '-' or escolha == '1': 
             implicacao()
             atribuicaoDeValores()
-        elif escolha in 'P ^ Q' or escolha =='2':
+        elif escolha[2] in 'P ^ Q' or escolha =='2':
             conjuncao()
             atribuicaoDeValores()
-        elif escolha in 'P v Q' or escolha =='3':
+        elif escolha[2] == 'v' or escolha =='3':
             disjuncao()
             atribuicaoDeValores()            
-        elif escolha in 'P<=>Q' or escolha =='4':
+        elif escolha[2] =='=' or escolha =='4':
             bicondicional()
             atribuicaoDeValores()
         else: 
